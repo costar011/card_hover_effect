@@ -13,5 +13,15 @@ body {
     color: #ffff;
     font-family: 'Source Serif Pro', serif;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     
+}
+
+.card {
+    width: 350px;
+    height: 200px;
+    border: 1px solid #ffff;
+
 }

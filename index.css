@@ -23,5 +23,43 @@ body {
     width: 350px;
     height: 200px;
     border: 1px solid #ffff;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
 
+.card::before,
+.card::after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50px;
+    filter: blur(35px);
+    z-index: -20;
+    transition: all .4s;
+}
+
+.card::before {
+    top: -5%;
+    left: -5%;
+    background: #F4979E;
+}
+
+.card::after {
+    bottom: -5%;
+    right: -5%;
+    background: #4568f6;
+}
+
+.card:hover::before {
+    transform: translateY(100%) scale(2);
+}
+
+.card:hover::after {
+    transform: translateY(-100%) scale(2);
 }
